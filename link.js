@@ -1,11 +1,11 @@
-﻿const Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
  client.on('message', message => {
     if (message.content.startsWith("رابط")) {
         message.channel.createInvite({
         thing: true,
-        maxUses: 1,
+        maxUses: 5,
         maxAge: 3600,
     }).then(invite =>
       message.author.sendMessage(invite.url)
@@ -21,20 +21,10 @@ const client = new Discord.Client();
               const Embed11 = new Discord.RichEmbed()
         .setColor("RANDOM")
         
-    .setDescription("** مدة الرابط : ساعه | عدد استخدامات الرابط : 1 **")
+    .setDescription("** مدة الرابط : ساعه | عدد استخدامات الرابط : 5 **")
       message.author.sendEmbed(Embed11)
     }
 }); 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Desert Bot- Script By : pretty`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : pretty ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`الشيخ بريتي`,"http://twitch.tv/S-F")
-client.user.setStatus("dnd")
-});
 
 
-client.login("NTM1MDYxMTc5OTE2MzUzNTU2.DyCqTQ.edMn-W815q9TUj_UeeRyF3wQF-g")
+client.login("NTM2OTkxMzMzMTUyNDU2NzI1.DyfA2Q.hLjrNRaz3swRUl4iXuPBbs69-zc")
